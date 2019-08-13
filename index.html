@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calculatorElective">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calc">
+        <script src="angular.js"></script>
+        <script src="main.js"></script>
+        <form name="calc" ng-controller="calculatorController">
+         
+            <input class="screen" name="textview" type="textview" value="{{ answer }}" placeholder="Enter number"readonly>
+        
+        <table>
+            <tr>
+                <td><input class="button" type="button" value="C" ng-click="clear()"></td>
+                <td><input class="button" type="button" value="«" onclick="back()"></td>
+                <td><input class="button" type="button" value="√" ng-click="sqrt()"></td>
+                <td><input class="button" type="button" value="/" ng-click='clicks("/")'></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="7" ng-click='clicks("7")'></td>
+                <td><input class="button" type="button" value="8" ng-click='clicks("8")'></td>
+                <td><input class="button" type="button" value="9" ng-click='clicks("9")'></td>
+                <td><input class="button" type="button" value="*" ng-click='clicks("*")'></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" ng-click='clicks("4")'></td>
+                <td><input class="button" type="button" value="5" ng-click='clicks("5")'></td>
+                <td><input class="button" type="button" value="6" ng-click='clicks("6")'></td>
+                <td><input class="button" type="button" value="-" ng-click='clicks("-")'></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" ng-click='clicks("1")'></td>
+                <td><input class="button" type="button" value="2" ng-click='clicks("2")'></td>
+                <td><input class="button" type="button" value="3" ng-click='clicks("3")'></td>
+                <td rowspan="2"><input style="height:115px;" class="button" type="button" value="+" ng-click ='clicks("+")'></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="0" ng-click='clicks("0")'></td>
+                <td><input class="button" type="button" value="." ng-click='clicks(".")'></td>
+                <td><input class="button" type="button" value="=" ng-click="equal()"></td>
+                </tr>   
+        </table>
+        </form>
+    </div>
+    
+</body>
+</html>
